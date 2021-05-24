@@ -1,18 +1,30 @@
-import { useRef, useState } from 'react';
+import Home from './components/home';
 import './App.css';
-import InputComp from './components/inputcomp';
-import ShowList from './components/showlist';
+import { Route, Switch } from 'react-router-dom';
+import NavBar from './components/navbar';
+import Login from './components/login';
+import Profile from './components/profile';
+import Register from './components/register';
+import { useState } from 'react';
 
 function App() {
-  const [result, setResult] = useState(null);
-  const checkfor = (value) => {
-    setResult(value);
-  };
+  const [tok, setTok] = useState(() => {
+    return localStorage.getItem('jwtTok');
+  });
 
   return (
     <div className="App">
-      <InputComp getValue={checkfor}></InputComp>
-      {result ? <ShowList res={result}></ShowList> : undefined}
+      <NavBar token={tok} />
+      <Switch>
+        <Route exact path="/login">
+          <Login setTok={setTok} />
+        </Route>
+        <Route exact path="/profile">
+          <Profile setTok={setTok} />
+        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/register" component={Register} />
+      </Switch>
     </div>
   );
 }

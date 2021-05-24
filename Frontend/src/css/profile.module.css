@@ -1,0 +1,32 @@
+.container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  padding: 10px 20px;
+  background: rgb(247, 122, 76);
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: orangered;
+}
+
+.container button:focus {
+  outline: none;
+}
+
+.container h3 {
+  margin: 20px;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: x-large;
+}
