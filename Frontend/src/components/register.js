@@ -65,6 +65,7 @@ const Register = () => {
       ></img>
 
       <form className={styles.frm} onSubmit={handleSubmit}>
+      <div className={styles.club}>
         <div className={styles.box}>
           <label htmlFor="name">Name</label>
           <input
@@ -94,6 +95,7 @@ const Register = () => {
             value={registerData.password}
             onChange={handleChange}
           ></input>
+        </div>
         </div>
         <button type="submit" className={styles.button}>
           {sign}

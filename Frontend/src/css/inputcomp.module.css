@@ -1,3 +1,4 @@
+@media only screen and (min-width: 992px){ 
 .container {
   margin: 20px;
   position: relative;
@@ -43,4 +44,54 @@
 .frm input:focus {
   outline: none;
   border: 2px solid red;
+}
+}
+/*for mobile devices*/
+@media only screen and (max-width: 600px){ 
+  .container {
+    margin: 90px;
+    position: relative;
+    
+  }
+  
+  .frm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .head {
+    margin-bottom: 2px;
+    font-size: 20px;
+  }
+  
+  .frm button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgb(85, 129, 252);
+    border: none;
+    border-radius: 5%;
+    color: white;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .frm button:hover {
+    background: rgb(10, 75, 253);
+    cursor: pointer;
+  }
+  
+  .frm input {
+    padding: 20px;
+    width: 100%;
+    border-radius: 5%;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 1em;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .frm input:focus {
+    outline: none;
+    border: 2px solid red;
+  }
 }

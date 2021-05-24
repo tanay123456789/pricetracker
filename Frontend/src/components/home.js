@@ -14,11 +14,11 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles.box}>
         <InputComp getValue={checkfor}></InputComp>
-
-        <div className={styles.image}>
-          <img src={target} width="200px" height="200px"></img>
-        </div>
       </div>
+      
+      <div className={styles.image}>
+          <img src={target} width="200px" height="200px" ></img>
+        </div>
       <div className="res">
         {result ? <ShowList res={result}></ShowList> : undefined}
       </div>

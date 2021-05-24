@@ -1,3 +1,5 @@
+
+@media only screen and (min-width: 992px){ 
 .container {
   background: black;
   height: 8vh;
@@ -84,4 +86,98 @@
 .sidelinks a:hover {
   color: rgb(223, 175, 113);
   transform: scale(1.1);
+}
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    top:0;
+    background: black;
+    height: 8vh;
+    width: 100vw;
+    z-index: 2;
+    position: fixed;
+  }
+  
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 50%;
+    width: 100%;
+  }
+  
+  .navlinks {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 4%;
+    overflow: hidden;
+  }
+  
+  .navlinks a {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo {
+    position: relative;
+    left: 3%;
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+  }
+  
+  .menu {
+    opacity: 0;
+    position: absolute;
+    right: 10%;
+    z-index: -1;
+  }
+  
+  .line {
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 4px;
+  }
+  
+  .lic {
+    background: rgb(26, 25, 25);
+    position: fixed;
+    right: 0%;
+    top: 8%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+  }
+  
+  .sidelinks {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidelinks a {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: 0.3s;
+  }
+  
+  .sidelinks a:hover {
+    color: rgb(223, 175, 113);
+    transform: scale(1.1);
+  }
+
 }
