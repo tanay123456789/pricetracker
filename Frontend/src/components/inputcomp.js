@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from '../css/inputcomp.module.css';
 
 const InputComp = ({ getValue }) => {
   const [keyword, setKeyword] = useState({ key: '' });
@@ -15,9 +16,9 @@ const InputComp = ({ getValue }) => {
   };
 
   return (
-    <div className="container">
-      <form action="submit">
-        <label htmlFor="search">Enter the keyword: </label>
+    <div className={styles.container}>
+      <h3 className={styles.head}>What are you looking for?</h3>
+      <form action="submit" className={styles.frm}>
         <input
           type="text"
           name="search"
